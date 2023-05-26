@@ -1,0 +1,675 @@
+/*
+    Creation : 12-Jan-2023 
+    Author   : Manoj Raghavan
+    File     : styles.css
+
+    Version history and changes:
+    1.0 - Creation - Music Player (Responsive)
+    2.0 - 
+*/
+  
+  #body {
+    background-color: black;
+    color :white;
+    display:flex;   
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
+/**************************  Header ************************/
+  #header {
+    height: 4vw;
+    width: 80%;
+    margin: 1% 10% 1% 10%;
+    background-color: #002366;
+    display : flex;
+    justify-content: space-between;
+    
+  }
+  .leftHeaderGroup {
+    display:flex ;
+    flex-direction: row;;
+  }
+  .leftHeaderGroup img {
+    height: 4vw;
+  }
+  .rightHeaderGroup {
+    display:flex ;
+    width :50%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+  .searchBox {
+    width : 50%;
+    height : 30px;
+    background-color: rgb(78, 69, 212);
+    border-radius : 6%;
+    color : rgb(186, 190, 207);
+    text-align: left;
+    vertical-align: center;
+    margin-right: 20px;
+  }
+  .searchBox .fa-microphone {
+   justify-self: flex-end;
+   margin-left: 60%;
+   
+  }
+  .searchBox .fa-bell {
+    margin-left: 20px;
+  }
+
+  .searchBox img {   
+    margin-left: 20px;
+  }
+
+  .leftHeaderGroup .favourites{
+    font-size: 12px;
+    margin-left: 30px;
+    align-items: center;
+    vertical-align: center;
+  }
+
+  .rightHeaderGroup img {
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    margin-left: 20px;
+  }
+  
+  /**************************  Main ************************/
+  #main {
+    width: 80%;
+    margin: -1% 10% 0% 10%;
+    background-color: #002366;
+    opacity: 90%;
+    display: flex;
+  }
+
+/*            Left Panel          */
+  #leftPanel {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-left: 5%;
+    margin-right: 3%;
+    height:100vh;
+    overflow:scroll;
+  }
+  
+
+/*                      Left Panel Sections                     */
+
+/*   
+  #bigImages {
+  #latestReleases {
+  #popularArtists {
+  #stations {
+  #categories {
+  #latestEnglish {
+  #latestHindi {
+
+*/
+
+  #latestReleases {
+    height : 180px;
+    display:flex;
+    justify-content: align-left;
+    flex-wrap: wrap;
+
+  }
+  #stations {
+    height : 100px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+  #latestEnglish {
+    height : 100px;
+    display:flex;
+    justify-content: space-between;
+
+
+  }
+  #latestHindi {
+    height : 100px;
+    display:flex;
+    justify-content: space-between;
+
+  }
+
+/* Left Panel sub-sections*/
+    /* bigImages */
+    #bigImages {
+      height : 180px;
+      display :flex;
+      justify-content: space-between;
+      
+    }
+  
+
+    #bigImagesContainer {
+        margin-top: 10px;
+        height: 90%;
+        width : 100%;        
+        display :flex;
+        justify-content: space-between;
+  
+
+    }
+    .bigImagesClass {
+        height : 150px;
+        min-width:150px;
+        width : 30%;
+    }
+    .bigImagesClass:hover {
+        height : 175px;
+        transform: scale(1.2);
+        min-width:150px;
+        width : 32%;
+        transform : translateX(5px);
+        transform : translateY(-7px);
+    }
+
+
+    /*                          Latest Releases                                  */
+
+    .latestReleasesClass {
+        width : 40%;
+        min-width : 200px;
+        /*border: 1px solid red;*/
+        display:flex;
+    }
+    
+    #latestRelease1 {
+      width : 40%;
+      min-width : 200px;
+      /*border: 1px solid red;*/
+      display:flex;
+      position : relative;
+      margin-right: 10px;
+    }
+    #latestRelease2 {
+      width : 40%;
+      min-width : 200px;
+      /*border: 1px solid red;*/
+      display:flex;
+      position : relative;
+    }
+    #latestRelease3 {
+      width : 40%;
+      min-width : 200px;
+      /*border: 1px solid red;*/
+      display:flex;
+      position : relative;
+      margin-right: 10px;
+
+    }
+    #latestRelease4 {
+      width : 40%;
+      min-width : 200px;
+      /*border: 1px solid red;*/
+      display:flex;
+      position : relative;
+    }
+
+    .latestReleasesText {
+        font-size:10px;
+        width : 60px;        
+        margin-left: 5%;
+        margin-top: 5%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .latestReleasesTiming {
+      margin-left: 40%;
+      font-size:10px;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: align-left;
+      margin-top:10px;
+    }
+
+    #latestMenu {
+      height : 0;
+      width : 0;
+      top:30px;
+      left:140px;
+      position: absolute;
+      overflow : hidden;
+      color:black;
+    }
+    #latestMenu:target {
+      height : 120px;
+      width : 120px;
+      top:30px;
+      left:140px;
+      background-color: rgb(216, 213, 213);
+      font-size: 12px;  
+      position: absolute;
+
+    }
+    #latestMenu:target .images {
+      color : grey;
+      margin-left: 10px;
+    }
+
+    #playLatestRelease {
+      height : 0%;
+      width : 0;
+      top : 90%;
+      position : fixed;
+      background-color: grey;
+      z-index:5;
+      display: flex;
+      align-items: center;     
+      overflow: hidden;
+    }
+    #playLatestRelease:target {
+      height : 10%;
+      width : 79%;
+      top : 90%;
+      margin-left: -4%;
+      position : fixed;
+      background-color: grey;
+      z-index:5;
+      display: flex;
+      align-items: center;     
+    }
+
+
+
+    #playLatestRelease .image {
+      margin-left: 30px;
+    }
+    #playLatestRelease .text {
+      display : flex;
+      flex-direction: column;
+      width : 120px;
+      margin-top: 10px;
+      margin-left: 20px;
+      font-size: 10px;
+      
+    }
+
+    #playLatestRelease .audio {
+      margin-left: 15%;
+      width : 500px;
+      
+    }
+    #playLatestRelease .cross {
+      margin-left: 90%;
+      color:blue;
+      
+      
+    }
+
+    /*                    Popular Artists                 */
+    #popularArtists {
+      height : 100px;
+      /*border: 1px solid yellow;*/
+      display:flex;
+      justify-content: space-around;
+      
+  
+    }
+
+    .popularArtistsImages {
+        height: 100px;
+        width : 100px;
+        border-radius: 50%;
+    }
+    /*
+    .artist  {
+      position : relative;
+    }
+
+    .artist .popularArtistsImages {     
+      position:absolute;
+      z-index:2;
+    }
+    .artist .play {
+      z-index:1;
+      position:absolute;
+      top : 40px;
+      left : 40px;
+    }
+    .artist .play:hover {
+      z-index:-1;
+    }
+    .artist .popularArtistsImages:hover {     
+      z-index:5;
+    }
+    */
+    .artist  {
+      position : relative;
+      display : flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .artist:hover .play{display:block} .play{
+        position : absolute;
+        top:45%;
+        width:40px;
+        margin:0 auto; left:0px;
+        right:0px;
+        z-index:100
+    } 
+    .play {
+      display:none;
+    }
+    /*
+    .artist .play {     
+      position:absolute;
+      z-index:-1;
+    }
+
+    .artist .play:hover {     
+      z-index:5;
+    }
+    .artist .popularArtistsImages:hover {     
+      position:absolute;
+      z-index:2;
+    }
+
+*/
+    /* Stations */
+    #stations {
+      height : 100px;
+      background-color: rgb(50, 50, 185);
+
+    }
+
+    #stations img {
+        height: 80px;
+        width : 80px;
+        border-radius: 50%;
+    }
+    .categoriesMusic {
+        height : 100px;
+        width : 200px;
+    }
+    .latestEnglishClass {
+        height : 100px;
+        width : 100px;
+
+    }
+
+/* */
+    .categories {
+      height : 100px;
+      /*border: 1px solid yellow;*/
+      display:flex;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+    .imageContainer {
+      height : 100px;
+      overflow:hidden;
+      flex:1;
+    }
+
+    .imageContainer img {
+      transition: transform .5s ease;
+
+    }
+    
+    /* [3] Finally, transforming the image when container gets hovered */
+    .imageContainer:hover img {
+      transform: scale(1.2);
+    }
+    
+/* Aside Panel */
+  #asidePanel {
+    width: 30%;
+    height : 100vh;
+    /*border: 1px solid yellow;*/
+    overflow: scroll;
+    position:relative;
+  }
+  #queueHeader {
+    font-size:14px;
+    display:flex;
+    width:90%;
+    justify-content: space-between;
+    margin-left: 2%;
+    height:40px;
+  }
+  #queueHeader1stgroup {
+    font-size:20px;
+    
+  }
+  #queueHeader2ndgroup {
+    color:lightskyblue;
+    display : flex;
+    justify-content: space-around;
+  }
+  #queueHeader2ndgroup .down {
+    margin-left:10px;
+    color:lightskyblue;
+    
+  }
+  #queueMenu {
+    height : 0;
+    width : 0;
+    top:40px;
+    left:190px;
+    position: absolute;
+    overflow : hidden;
+    color:black;
+  }
+
+  #queueMenu:target {
+    height : 60px;
+    width : 120px;
+    top:40px;
+    left:190px;
+    background-color: rgb(216, 213, 213);
+    font-size: 12px;  
+    
+  }
+
+  .queueClass {
+    width : 92%;
+    min-width : 200px;
+    /* border: 1px solid red;*/
+    margin-left: 2%;
+    display:flex;
+    justify-content: space-between;
+  }
+  .queue1stGroup {
+    display:flex;
+    justify-content: space-between;
+    width : 150px;
+
+  }
+  .queueClass .number {
+    margin-right: 8px;
+    margin-top: 14px;;
+    font-size: 12px;;
+  }
+
+  .queueImage {
+    height : 50px;
+    width : 50px;
+    margin-right :10px;;
+    background: rgb(184, 178, 178); 
+    box-shadow: 0 0 20px rgb(184, 178, 178); 
+
+  }
+  .queueText {
+    font-size:10px;
+    margin-top: 10px;;
+    display:flex;
+    width : 80px;
+    flex-direction: column;
+    align-items: left;
+
+  }
+.heart {
+  margin-right : 1%;
+  margin-top : 10px;
+}
+
+
+
+/************************/
+a:link {
+  color : white;
+}
+a:visited {
+  color : rgb(221, 10, 46);
+}
+
+
+/********************************** Responsive Section ************************/
+@media screen and (max-width:1000px) {
+  .queue1stGroup .fa-heart {
+    display : none;
+  }  
+
+  .rightHeaderGroup img {
+    height:30px;
+    width:30px;
+  }
+  .searchBox .fa-microphone {
+    justify-self: flex-end;
+    margin-left: 50%;
+    
+   }
+ 
+   .queueImage {
+    height : 30px;
+    width : 30px;
+
+  }
+
+}
+
+@media screen and (max-width:768px) {
+  .queue1stGroup .fa-heart {
+    display : none;
+  }
+  #bigImagesContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #bigImages {
+    height:auto;
+    width :90%;
+    padding-top: 30px;
+
+  }
+  #bigImages img{
+    margin-top: 10px;
+    width : 90%;
+
+  }
+
+  #latestReleases {
+    height:auto;
+
+    align-items: center;
+
+  }
+  #popularArtists {
+    flex-direction: column;
+    height:auto;
+    justify-content: center;
+    align-items: center;
+
+
+  }
+  #stations {
+    flex-direction: column;
+    height:auto; 
+    justify-content: center;
+    align-items: center;
+
+  }
+  .categories {
+    flex-direction: column;
+    height:auto; 
+    justify-content: center;
+    align-items: center;
+
+  }
+  .categories imageContainer {
+    width : 100%;
+  }
+
+  #latestEnglish {
+    flex-direction: column;
+    height:auto; 
+    justify-content: center;
+    align-items: center;
+
+  }
+  #latestHindi {
+    flex-direction: column;
+    height:auto; 
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .rightHeaderGroup .fa-bell {
+    display: none;
+  }
+  .rightHeaderGroup img {
+    height:26px;
+    width:26px;
+  }
+  .searchBox .fa-microphone {
+    justify-self: flex-end;
+    margin-left: 30%;
+    
+   }
+
+   .searchBox  {
+    font-size: 12px;; 
+    height:20px;   
+ }
+
+
+}
+
+@media screen and (max-width:600px) {
+  .searchBox .fa-microphone {
+    justify-self: flex-end;
+    margin-left: 5%;
+    
+   }
+   .searchBox  {
+      font-size: 12px;; 
+      height:20px;   
+   }
+
+   #queueHeader {
+    font-size: 12px;
+   }
+   
+   #playLatestRelease .audio {
+    margin-left: 3%;
+    width : 200px;
+    
+  }
+
+  .leftHeaderGroup .favourites{
+    font-size: 8px;
+    
+  }
+
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+}

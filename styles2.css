@@ -1,0 +1,298 @@
+/*
+    Creation : 12-Jan-2023 
+    Author   : Manoj Raghavan
+    File     : styles2.css
+
+    Version history and changes:
+    1.0 - Creation - Music Player (Responsive)
+    2.0 - 
+*/
+
+#body {
+    background-color: black;
+    color :white;
+    width : 100vw;
+}
+
+#header {
+    height: 4vw;
+    width: 80%;
+    margin: 0% 10% 0% 10%;
+    background-color: #002366;
+    display : flex;
+    justify-content: space-between;
+    
+}
+
+#PAmain {  
+  height : 96vw;
+  margin: 0% 10% 0% 10%;
+  display : flex;
+  flex-direction: row;
+  background-color: #002366;
+
+}
+
+
+#PAleftPanel {
+  width: 60%;
+  height:96vw;
+  margin-left : 8%;
+
+
+}
+
+#PArightPanel {
+  width: 25%;
+  height : 96vw;
+  background-color:#002366;
+
+
+}
+
+
+/********************** Artist *************************/
+
+#PAleftPanel #artist {
+  width : 95%;
+  height: 250px;
+  display:flex;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background-color: #12326d;
+
+
+}
+#artist img {
+  height: 250px;
+
+}
+
+#artist .text {
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+
+#playall {
+  width : 100px;
+  height:30px;
+  font-size: 12px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(to right, blue , rgb(226, 74, 99));
+}
+#playallrow {
+  display: flex;
+  align-items: center;
+  width : 50%;
+  justify-content: space-between;
+
+}
+
+#artist .text #title {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+/*********************** Songs list *********************/
+
+.songClass {
+  width : 95%;
+  min-width : 200px;
+  /* border: 1px solid red;*/  
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(26, 21, 21);
+  margin-bottom: 6px;
+}
+
+.song1stGroup {
+  display:flex;
+  justify-content: space-between;
+  width : 150px;
+
+}
+.songImage {
+  height : 50px;
+  width : 50px;
+  margin-right :10px;;
+  background: rgb(184, 178, 178); 
+  box-shadow: 0 0 20px rgb(184, 178, 178); 
+
+}
+.songText {
+  font-size:10px;
+  margin-top: 10px;;
+  display:flex;
+  width : 80px;
+  flex-direction: column;
+  align-items: left;
+
+}
+
+.songClass .number {
+  margin-right: 8px;
+  margin-top: 14px;;
+  font-size: 12px;;
+}
+
+
+.bigFont {
+  font-size: 20px;
+}
+.smallFont {
+  font-size: 10px;
+}
+
+/****************************** PA Right Panel ***************************/
+#PArightPanel #similar {
+  margin-top: 20px;
+
+}
+#similarArtists {
+  width : 40%;
+  min-width : 200px;
+  /*border: 1px solid red;*/
+  display:flex;
+  position : relative;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.similarText {
+  font-size:10px;
+  width : 120px;        
+  margin-left: 5%;
+  margin-top: 5%;
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.similarTiming {
+  margin-left: 20%;
+  font-size:10px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: align-left;
+  margin-top:10px;
+}
+
+
+/************************** RECENTLY PLAYED ***********************/
+
+.recent {
+  width:75%;
+  margin-top: 10px;
+  background-color: #002366;
+}
+
+.recent .song1stGroup img {
+  height: 30px;
+  width : 30px;
+}
+
+#playPopularArtist {
+  height : 10%;
+  width : 80%;
+  top : 90%;
+  position : fixed;
+  background-color: grey;
+  z-index:5;
+  display: flex;
+  align-items: center;     
+  overflow: hidden;
+  margin-left: -6.5%;
+
+}
+
+#playPopularArtist .image {
+  margin-left: 30px;
+}
+#playPopularArtist .text {
+  display : flex;
+  flex-direction: column;
+  width : 120px;
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 10px;
+  
+}
+
+#playPopularArtist .audio {
+  margin-left: 15%;
+  width : 500px;
+  
+}
+#playPopularArtist .cross {
+  margin-left: 90%;
+  color:blue;
+  
+  
+}
+
+
+/***********************************************************/
+@media screen and (max-width:1000px) {
+  #PAleftPanel #artist .description {
+    display : none;
+  }
+
+  #PAleftPanel #artist #title {
+    font-size: 12px;
+  }
+
+  #PAleftPanel {
+    height: auto;
+  }
+
+  #PAleftPanel #artist img {
+    height:200px;
+  }
+  #playall {
+    width : 60px;
+    margin-left: 10px;
+  }
+
+  #playallrow {
+    flex-direction: column;
+  }
+  #artist img {
+    height: auto;
+  
+  }
+  #artist .text {
+    font-size: 12px;  
+  }
+
+
+  #similarArtists img {
+    height : 30px;
+    width : 30px;
+  }
+
+  .recent .fa-heart {
+    display: none;
+
+  }
+  .recent {
+    width : 0%;
+  }
+
+  .songClass {
+    
+    min-width : auto;
+  }
+  #similarArtists .similarTiming {
+    display: none;
+  }
+  #playLatestRelease .audio {
+    margin-left: 3%;
+    width : 200px;
+
+}
